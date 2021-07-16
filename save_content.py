@@ -13,6 +13,9 @@ def save_content(date):
             fpath = f"current-situation/{date.strftime('%Y/%m')}/"
         else:
             fpath = f"special/{date.strftime('%Y')}/"
+        if len(title) > 248:
+            title = title[:248]
+
         fname = f"{title}.html"
 
         # Make directory if not exist
