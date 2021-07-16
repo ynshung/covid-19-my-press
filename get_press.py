@@ -15,7 +15,7 @@ with open(curr_prog, 'r') as f:
     date = datetime.date(*map(int,f.read().split('/')))
 
 # Start check up to today
-while datetime.date.today() > c_date:
+while datetime.date.today() > date+datetime.timedelta(days=1):
     
     date += datetime.timedelta(days=1)
 
